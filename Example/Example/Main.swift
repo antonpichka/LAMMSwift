@@ -289,15 +289,15 @@ public final class DataForMainVM : BaseDataForNamed<EnumDataForMainVM> {
 
 public final class MainVM {
     // ModelWrapperRepository
-    public let iPAddressWrapperRepository = FactoryModelWrapperRepositoryUtility.getIPAddressWrapperRepositoryFromNamedUrlSessionService(TimeoutUrlSessionService.instance)
+    private let iPAddressWrapperRepository = FactoryModelWrapperRepositoryUtility.getIPAddressWrapperRepositoryFromNamedUrlSessionService(TimeoutUrlSessionService.instance)
     
     // TempCacheProvider
-    public let tempCacheProvider: TempCacheProvider
+    private let tempCacheProvider: TempCacheProvider
     
     // NamedUtility
     
     // NamedStreamWState
-    public let namedStreamWState: BaseNamedStreamWState<EnumDataForMainVM,DataForMainVM>
+    private let namedStreamWState: BaseNamedStreamWState<EnumDataForMainVM,DataForMainVM>
     
     public init() async {
         self.tempCacheProvider = await TempCacheProvider()

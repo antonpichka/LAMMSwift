@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8464D7242D2A924C00F1CC59 /* LAMMSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8464D7232D2A924C00F1CC59 /* LAMMSwift */; };
 		848091ED2D2150C300F1FB5F /* LAMMSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 848091EC2D2150C300F1FB5F /* LAMMSwift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				848091ED2D2150C300F1FB5F /* LAMMSwift in Frameworks */,
+				8464D7242D2A924C00F1CC59 /* LAMMSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,7 @@
 			name = Example;
 			packageProductDependencies = (
 				848091EC2D2150C300F1FB5F /* LAMMSwift */,
+				8464D7232D2A924C00F1CC59 /* LAMMSwift */,
 			);
 			productName = Example;
 			productReference = 84F591252D1FD77E00DA6CCA /* Example */;
@@ -113,7 +116,7 @@
 			mainGroup = 84F5911C2D1FD77E00DA6CCA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				848091EB2D2150C300F1FB5F /* XCLocalSwiftPackageReference "../../LAMMSwift" */,
+				8464D7222D2A924C00F1CC59 /* XCLocalSwiftPackageReference "../../LAMMSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 84F591262D1FD77E00DA6CCA /* Products */;
@@ -296,13 +299,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		848091EB2D2150C300F1FB5F /* XCLocalSwiftPackageReference "../../LAMMSwift" */ = {
+		8464D7222D2A924C00F1CC59 /* XCLocalSwiftPackageReference "../../LAMMSwift" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../LAMMSwift;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8464D7232D2A924C00F1CC59 /* LAMMSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LAMMSwift;
+		};
 		848091EC2D2150C300F1FB5F /* LAMMSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LAMMSwift;
