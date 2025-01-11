@@ -40,6 +40,16 @@ open class ListIPAddress<T : IPAddress> : BaseListModel<T> {
     }
 }
 
+open class IPAddressWrapper : BaseModelWrapper {
+    public override init(_ listObject: [Any]) {
+        super.init(listObject)
+    }
+    
+    open override func createModel<T: BaseModel>() -> T {
+        return IPAddress(self.listObject[0] as? String ?? "") as! T
+    }
+}
+
 open class ListIPAddressWrapper : BaseListModelWrapper {
     public override init(_ listsListObject: [[Any]]) {
         super.init(listsListObject)
@@ -48,9 +58,8 @@ open class ListIPAddressWrapper : BaseListModelWrapper {
     open override func createListModel<T: BaseModel, Y: BaseListModel<T>>() -> Y {
         var listModel: [IPAddress] = []
         for itemListObject: [Any] in self.listsListObject {
-            for itemObject: Any in itemListObject {
-                listModel.append(IPAddress(itemObject as? String ?? ""))
-            }
+            let iPAddressWrapper = IPAddressWrapper(itemListObject)
+            listModel.append(iPAddressWrapper.createModel())
         }
         return ListIPAddress(listModel) as! Y
     }

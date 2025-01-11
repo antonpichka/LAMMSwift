@@ -92,9 +92,8 @@ open class ListIPAddressWrapper : BaseListModelWrapper {
     open override func createListModel<T: BaseModel, Y: BaseListModel<T>>() -> Y {
         var listModel: [IPAddress] = []
         for itemListObject: [Any] in self.listsListObject {
-            for itemObject: Any in itemListObject {
-                listModel.append(IPAddress(itemObject as? String ?? ""))
-            }
+            let iPAddressWrapper = IPAddressWrapper(itemListObject)
+            listModel.append(iPAddressWrapper.createModel())
         }
         return ListIPAddress(listModel) as! Y
     }
